@@ -57,38 +57,51 @@ body {
 	letter-spacing: 0.01em;
 }
 
-.conteiner {
-}
-
-.flex {
+@media (min-width: 890px) {
+	.conteiner {
+		width: 100%;
+		min-height: 100vh;
+	}
+	.flex {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 .grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax($card-w, 1fr));
-	grid-auto-flow: row;
+	// grid-auto-flow: row;
 	gap: $gap;
 
 	@media (min-width: 890px) {
-		// grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 	}
 }
 
 .span-col2 {
 	@media (min-width: 576px) {
-		// grid-column: span 2;
+		grid-column: span 2;
 	}
 }
 
 .span-row2 {
 	@media (min-width: 576px) {
-		// grid-column: span 2;
+		grid-column: span 2;
 	}
 
+	// @media (min-width: 890px) {
+	// 	grid-column: span 1;
+	// 	grid-row: span 2;
+	// }
+}
+
+.order {
+	// order: -1;
 	@media (min-width: 890px) {
-		// grid-column: span 1;
-		// grid-row: span 2;
-		// order: 1;
+		grid-column: 4;
+		grid-row: 1/3;
 	}
 }
 
@@ -98,29 +111,80 @@ body {
 .bord {
 	margin: 0 $gap;
 	max-width: $bord-w;
+
+	@media (max-width: 992px) {
+		margin-top: $gap;
+	}
 }
 .card-item {
-	@media (min-width: 890px) {
-		width: $card-w;
-	}
+	// @media (min-width: 890px) {
+	// 	width: $card-w;
+	// }
+	color: $color-card-blackish;
+	background-color: $color-White;
+	border-radius: 10px;
+	padding: $gap;
+
+	display: grid;
+	grid-auto-flow: row;
+	gap: $gap - 10px;
+
+	align-items: start;
+	box-shadow: 0 5px 10px 5px $color-gray;
 }
 
 .card__title {
+	width: 100%;
+	display: grid;
+	grid-template-columns: $foto-w 1fr;
+	gap: $gap;
+	align-items: center;
 }
 .foto {
+	width: $foto-w + 2px;
+	height: $foto-w + 2px;
+	border-radius: 50%;
+	border: 2px solid $color-bg;
+	overflow: hidden;
+	// border: transparent;
+
+	& img {
+		width: 100%;
+	}
 }
 .name {
+	& h2 {
+		font-weight: 600;
+	}
+	& span {
+		opacity: 50%;
+	}
 }
+
 .card__header {
+	font-size: $font-body * 1.5;
+	line-height: 1.5em;
 }
+
 .card__description {
+	opacity: 0.7;
+}
+
+@mixin font-style {
+	color: $color-White;
 }
 
 .bg-violet {
+	background-color: $color-card-violet;
+	@include font-style();
 }
 
 .bg-grayish {
+	background-color: $color-card-grayish;
+	@include font-style();
 }
 
 .bg-blackish {
+	background-color: $color-card-blackish;
+	@include font-style();
 }

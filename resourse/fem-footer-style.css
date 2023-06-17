@@ -19,7 +19,7 @@
 	color: var(--my-link-color);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 	.attribution {
 		position: fixed;
 		bottom: 0;
