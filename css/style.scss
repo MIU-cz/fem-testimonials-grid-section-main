@@ -1,2 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
 @import url(../resourse/normaliz-style-min.css);
 @import url(../resourse/fem-footer-style.css);
+
+// # Front-end Style Guide
+
+// ## Layout
+// The designs were created to the following widths:
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+
+// ### Primary
+$color-card-violet: hsl(263, 55%, 52%); //Moderate violet
+$color-card-grayish: hsl(217, 19%, 35%); //Very dark grayish blue
+$color-card-blackish: hsl(219, 29%, 14%); //Very dark blackish blue
+$color-White: hsl(0, 0%, 100%);
+
+// ### Neutral
+$color-gray: hsl(0, 0%, 81%); //Light gray
+$color-bg: hsl(210, 46%, 95%); //Light grayish blue
+
+// Note for text colors:
+// 1. "Verified Graduate" has the same color as the person's name with 50% opacity
+// 2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+
+// ## Typography
+$font-body: 13px;
+
+// ### Font
+// - Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
+$font-family: "Barlow Semi Condensed", sans-serif;
+// - Weights: 500, 600
+
+//# My Variables
+$bord-w: 1110px;
+$bord-h: 575x;
+
+$card-w: 256px;
+$card-h: 270px;
+
+$card-w-w: 542px;
+$card-h-h: $bord-h;
+
+$gap: 30px;
+$foto-w: 32px;
+
+// # ================= #
+// # Main Style:
+body {
+	background-color: $color-bg;
+	font-family: $font-family;
+	font-size: $font-body;
+	font-weight: 500;
+	line-height: 1.5em;
+	letter-spacing: 0.01em;
+}
+
+.conteiner {
+}
+
+.flex {
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax($card-w, 1fr));
+	grid-auto-flow: row;
+	gap: $gap;
+
+	@media (min-width: 890px) {
+		// grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.span-col2 {
+	@media (min-width: 576px) {
+		// grid-column: span 2;
+	}
+}
+
+.span-row2 {
+	@media (min-width: 576px) {
+		// grid-column: span 2;
+	}
+
+	@media (min-width: 890px) {
+		// grid-column: span 1;
+		// grid-row: span 2;
+		// order: 1;
+	}
+}
+
+// # ================= #
+// # Content Style:
+
+.bord {
+	margin: 0 $gap;
+	max-width: $bord-w;
+}
+.card-item {
+	@media (min-width: 890px) {
+		width: $card-w;
+	}
+}
+
+.card__title {
+}
+.foto {
+}
+.name {
+}
+.card__header {
+}
+.card__description {
+}
+
+.bg-violet {
+}
+
+.bg-grayish {
+}
+
+.bg-blackish {
+}
