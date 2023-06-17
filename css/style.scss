@@ -177,6 +177,10 @@ body {
 .bg-violet {
 	background-color: $color-card-violet;
 	@include font-style();
+	background-image: url(../images/bg-pattern-quotation.svg);
+	background-repeat: no-repeat;
+	background-position: 80% 0;
+	background-size: 120px 120px;
 }
 
 .bg-grayish {
